@@ -1,0 +1,55 @@
+.bscreate {
+    &_block {
+        h2 {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        &__wrapper {
+            margin: 30px 0px;
+            background: #fff;
+            padding: 24px;
+            &__item {
+                margin-top: 8px;
+                display: grid;
+                grid-template-columns: 0.4fr 1fr;
+                &:nth-child(31) {
+                    border-top: 1px solid #00000024;
+                    padding-top: 8px;
+                }
+                span {
+                    color: #191b1d91;
+                }
+            }
+        }
+    }
+    &_btn {
+        padding: 30px 0px;
+        display: flex;
+        align-items: center;
+        a {
+            color: black;
+            display: flex;
+            align-items: center;
+            img {
+                margin-left: 8px;
+            }
+            &:first-child {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .bscreate_block__wrapper__item {
+        grid-template-columns: 1fr 1fr;
+        p {
+            text-align: right;
+        }
+    }
+    .bscreate_block {
+        .table__wrapper__body ul {
+            grid-template-columns: 1fr !important;
+        }
+    }
+}

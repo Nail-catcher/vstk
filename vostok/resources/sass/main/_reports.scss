@@ -1,0 +1,47 @@
+.reports {
+    &__content {
+        max-width: 708px;
+        width: 100%;
+        margin-top: 46px;
+        height: 302px;
+        background-color: #fff;
+        border: $border;
+        padding: 32px;
+        &__body {
+            margin-top: 32px;
+        }
+        label {
+            color: $inputText;
+        }
+        .row {
+            margin-top: 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 17px;
+        }
+    }
+    .calendar_input {
+        margin: 0;
+        padding: 0;
+        span {
+            left: 10px;
+        }
+    }
+    button {
+        margin-top: 24px;
+    }
+}
+
+.report {
+    .calendar_block {
+        max-width: 100%;
+    }
+    .select {
+        margin: 0;
+    }
+}
+
+.submenu-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}

@@ -1,0 +1,155 @@
+.traffic-reports {
+  &__table {
+    margin-top: 32px;
+    tbody tr td {
+      padding: 14px 20px;
+      font-size: 14px;
+      .material-icons {
+        top: 15px;
+        position: relative;
+      }
+    }
+    thead tr td {
+      font-size: 14px;
+      padding: 14px 20px;
+    }
+    input[type="checkbox"]:checked + label,
+    input[type="checkbox"]:not(:checked) + label,
+    input[type="radio"]:checked + label,
+    input[type="radio"]:not(:checked) + label {
+      display: block;
+    }
+  }
+  &__content {
+    margin-top: 46px;
+    width: 708px;
+    height: 207px;
+    background-color: #fff;
+    border: $border;
+    padding: 32px;
+    h2 {
+      font-size: 16px;
+      color: $black;
+      font-weight: 600;
+    }
+    label {
+      color: $inputText;
+    }
+    &__body {
+      margin-top: 32px;
+    }
+  }
+  button {
+    margin-top: 24px;
+  }
+  &__filter {
+    padding: 16px 16px 24px 16px;
+    border-radius: 4px;
+    background-color: #fff;
+    display: grid;
+    height: 120px;
+    font-size: 14px;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    grid-gap: 24px;
+    .calendar_input {
+      padding: 0;
+      margin: 0;
+      img {
+        left: 9px;
+        bottom: 13px;
+      }
+    }
+    #filterReset {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        margin-top: 28px;
+      }
+    }
+  }
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+}
+
+.traffic-reports {
+  .traffic-reports__filter {
+    grid-template-columns: repeat(4, 1fr);
+    height: auto;
+  }
+  .base-header {
+    h1 {
+      width: 300px;
+    }
+  }
+  .table__wrapper__head {
+    ul {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  .table__wrapper__body {
+    ul {
+      li {
+        padding: 16px 0px;
+        label {
+          height: 12px;
+        }
+      }
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 1340px) {
+  .traffic-reports .table__wrapper__body ul {
+    display: block;
+  }
+  .traffic-reports .traffic-reports__filter {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .traffic-reports__filter.mxw1050.mt32 div {
+    margin: 0 auto;
+  }
+  .traffic-reports .traffic-reports__filter {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.rsfst {
+  display: block;
+  overflow: hidden;
+  height: 48px;
+}
+.rsfst.active {
+  height: 100%;
+}
+
+.calendar_input {
+  height: 100%;
+  input {
+    height: 100%;
+  }
+}
+
+.tmz-btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__item{
+    display: flex;
+    align-items: center;
+    p{
+      cursor: pointer;
+      margin-top: 24px;
+      margin-right: 10px;
+    }
+  }
+}

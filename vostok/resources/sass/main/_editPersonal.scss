@@ -1,0 +1,70 @@
+.editPersonal {
+    .btn-wrap {
+        display: flex;
+        .cancel {
+            margin-left: 15px;
+            background: rgba(25, 27, 29, 0.05);
+            color: rgba(25, 27, 29, 0.6);
+        }
+    }
+}
+.users-index {
+    .base-header {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+    .options {
+        display: grid;
+        grid-row-gap:16px;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: 32px;
+        p.resetText {
+            display: flex;
+            align-items: center;
+        }
+        input {
+            height: 48px;
+        }
+    }
+}
+.usr {
+    .modal-req {
+        top: 49px;
+    }
+    .table__wrapper__body {
+        ul {
+            li {
+                position: relative;
+            }
+        }
+        img {
+            top: 5px;
+            bottom: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 1340px) {
+    .usr {
+        .table__wrapper__body {
+            ul {
+                li:first-child {
+                    span {
+                        display: none;
+                    }
+                }
+                li:last-child {
+                    position: absolute;
+                    top: 26px;
+                    right: 0;
+                }
+            }
+        }
+    }
+    .usr {
+        .modal-req {
+            right: 0px;
+            top: 28px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import "../fonts/sfui";
+@import "~reset-css/sass/reset";
+@import "~material-design-icons-iconfont";
+@import "settings";
+
+@import "./main/loginForm";
+@import "./main/main";
+@import "./main/base";
+@import "./main/request";
+@import "./main/profile";
+@import "./main/_routes";
+@import "./main/calendar";
+@import "./main/requestList";
+@import "./main/reports";
+@import "./main/editPersonal";
+@import "./main/addPersonal";
+@import "./main/equipment";
+@import "./main/history";
+@import "./main/swap";
+@import "./main/trafficReports";
+@import "./main/requestItem";
+@import "./main/modal";
+@import "./main/pagination";
+@import "./main/map";
+@import "./main/bs";
+
+$material-design-icons-font-directory-path: '~material-design-icons-iconfont/dist/fonts/';
+
+@import '~material-design-icons-iconfont/src/material-design-icons';

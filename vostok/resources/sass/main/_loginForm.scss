@@ -1,0 +1,110 @@
+.login {
+    background-color: #fff;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100vh;
+        @include ipad {
+            justify-content: center;
+        }
+    }
+
+    &-form {
+        margin-left: 117px;
+        @include ipad {
+            margin: 0;
+        }
+    }
+
+    .logo {
+        margin-bottom: 50px;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 150%;
+        color: $black;
+        margin-bottom: 16px;
+    }
+
+    .registration {
+        font-size: 16px;
+        line-height: 150%;
+        margin-bottom: 24px;
+        color: $grayText;
+
+        a {
+            text-decoration: none;
+            color: $main;
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px;
+
+        input {
+            border: $border;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            padding: 13px 16px;
+            transition: all .2s ease-in-out;
+
+            &::placeholder {
+                color: $grayText;
+                font-size: 16px;
+            }
+
+            &:focus {
+                border: 1px solid $main;
+                transition: all .2s ease-in-out;
+            }
+        }
+    }
+
+    .forgot-password {
+        color: $grayText;
+        font-size: 16px;
+        margin-bottom: 24px;
+
+        a {
+            color: #000000;
+        }
+    }
+
+    .button {
+        display: block;
+        color: white;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 13px 46px;
+        border-radius: 4px;
+        min-height: 50px;
+        background-color: $main;
+        max-width: 242px;
+        width: 100%;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            transition: all .3s ease-in-out;
+            background-color: $buttonHover;
+        }
+    }
+
+    &-col {
+        background-image: url("../../images/main_bg.jpg");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-position-y: top;
+        background-size: cover;
+        width: 50%;
+        height: 100vh;
+        @include ipad {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,518 @@
+@import './media';
+// colors
+$main: #00a49d;
+$medium: #095753;
+$buttonHover: #00706b;
+$darkBlue: #09333d;
+$black: #2d2c2c;
+$purple: #a31089;
+$gray: #768599;
+$red: #d12528;
+$yellow: #b38f00;
+$green: #3ba521;
+$orange: #ff5930;
+$bg: #f1f5f9;
+$border: 1px solid #e2e5e9;
+$borderFocus: 1px solid #00a49d;
+$inputText: #b2b2b2;
+$grayText: #999999;
+$critical: #ea6556;
+$criticalBg: rgba(234, 101, 86, 0.1);
+$major: #f79009;
+$majorBg: rgba(247, 144, 9, 0.1);
+$minor: green;
+$minorBg: #0080002e;
+$notDone: #d81f1c;
+$new: #00a49d;
+$inTheProcess: #80a80a;
+$done: rgba(9, 51, 61, 0.5);
+.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl-attrib {
+    display: none !important;
+}
+
+.mt16 {
+    margin-top: 16px;
+}
+
+// animation vue js
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave-to
+/* .fade-leave-active до версии 2.1.8 */
+
+{
+    opacity: 0;
+}
+
+.area__title {
+    display: grid;
+    margin-top: 40px;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    .table-title {
+        margin-top: 0;
+    }
+    a {
+        text-align: right;
+        text-decoration: none;
+        color: #282828;
+        transition: color 0.2s ease;
+        &:hover {
+            color: $main;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.ml24 {
+    margin-left: 24px;
+}
+
+.textIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+        padding-left: 8px;
+    }
+}
+
+.displayBlock {
+    display: block !important;
+}
+
+.mt64 {
+    margin-top: 64px;
+}
+
+.more_bts_btn {
+    color: $main;
+    font-size: 14px;
+    cursor: pointer;
+    &:hover {
+        color: $medium;
+    }
+}
+
+.alert_modal {
+    .modal_regular__header {
+        padding: 16px 0px;
+        p {
+            text-align: center;
+        }
+    }
+    .modal_regular__body {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            padding: 13px 46px;
+        }
+    }
+}
+
+.mt24 {
+    margin-top: 24px;
+}
+
+.mt32 {
+    margin-top: 32px;
+}
+
+.mt8 {
+    margin-top: 8px;
+}
+
+.centerChild {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+.textRight {
+    text-align: right;
+}
+
+.border_bottom {
+    border-bottom: $border;
+}
+
+.blue2 {
+    color: #4275e3;
+}
+
+.centerContent {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+body {
+    font-family: SFUIText, sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 400;
+    color: $black;
+    background-color: $bg;
+}
+
+textarea {
+    font-family: SFUIText, sans-serif;
+    &::placeholder {
+        font-weight: 400;
+    }
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+
+.col3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.blur {
+    filter: brightness(70%);
+}
+
+.isAdded {
+    background-color: #3ba52122;
+}
+
+.isAdded2 {
+    background-color: #c4c2c2 !important;
+}
+
+.input-search {
+    display: grid;
+    grid-gap: 16px;
+    position: relative;
+    max-width: 220px;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    span {
+        right: 16px;
+        position: absolute;
+        color: $inputText;
+        &:hover {
+            opacity: 0.7;
+        }
+        &:active {
+            opacity: 1;
+        }
+    }
+}
+
+.custom-scroll {
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 2px;
+        height: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background-color: $main;
+        -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.request_comment_overflow {
+    max-width: 400px;
+    word-wrap: break-word;
+}
+
+.validation_label {
+    font-size: 14px;
+}
+
+.validation_label__error {
+    color: $orange;
+}
+
+.search-input_container {
+    .erase_btn,
+    .done_btn {
+        position: absolute;
+        margin: 0 auto;
+        top: 10px;
+        color: $inputText;
+        transition: color 0.2s ease;
+        &:hover {
+            color: #373737;
+        }
+    }
+    .erase_btn {
+        right: 10px;
+    }
+    .done_btn {
+        right: 36px;
+    }
+    position: relative;
+}
+
+.activeRequestDashboard {
+    background: rgba(0, 164, 157, 0.05) !important;
+}
+
+.deactivateMaxWidth {
+    max-width: 100% !important;
+}
+
+.markerMap {
+    width: 15px;
+    background-color: $red;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
+    padding: 7px;
+    font-size: 12px;
+    min-width: 150px;
+    max-width: 300px;
+    font-weight: medium;
+}
+
+.ghost {
+    opacity: 0.5;
+    background-color: #d3ebe0;
+}
+
+.mapboxgl-popup-close-button {
+    display: none;
+}
+
+.drag_btn {
+    cursor: move;
+}
+
+button {
+    font-family: SFUIText, sans-serif;
+    outline: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+input[type='checkbox']:checked,
+input[type='checkbox']:not(:checked),
+input[type='radio']:checked,
+input[type='radio']:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type='checkbox']:checked+label,
+input[type='checkbox']:not(:checked)+label,
+input[type='radio']:checked+label,
+input[type='radio']:not(:checked)+label {
+    display: inline-block;
+    position: relative;
+    padding-left: 22px;
+    line-height: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+input[type='checkbox']:checked+label:before,
+input[type='checkbox']:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid rgba(178, 178, 178, 0.8);
+}
+
+input[type='radio']:checked+label:before,
+input[type='radio']:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid $main;
+}
+
+.space-between {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type='checkbox']:checked+label:before,
+input[type='checkbox']:not(:checked)+label:before {
+    border-radius: 2px;
+}
+
+input[type='radio']:checked+label:before,
+input[type='radio']:not(:checked)+label:before {
+    border-radius: 100%;
+}
+
+input[type='checkbox']:checked+label:after,
+input[type='checkbox']:not(:checked)+label:after,
+input[type='radio']:checked+label:after,
+input[type='radio']:not(:checked)+label:after {
+    content: '';
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+input[type='checkbox']:checked+label:after,
+input[type='checkbox']:not(:checked)+label:after {
+    left: 3px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+input[type='radio']:checked+label:after,
+input[type='radio']:not(:checked)+label:after {
+    left: 4px;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: $main;
+}
+
+.userGeo {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: $main;
+}
+
+.place-return-on-map {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $inTheProcess;
+}
+
+input[type='checkbox']:not(:checked)+label:after,
+input[type='radio']:not(:checked)+label:after {
+    opacity: 0;
+}
+
+input[type='checkbox']:checked+label:after,
+input[type='radio']:checked+label:after {
+    opacity: 1;
+}
+
+input[type='checkbox']:checked+label:before,
+input[type='radio']:checked+label:before {
+    background: #00a49d;
+}
+
+.workType {
+    color: #39802d;
+}
+
+.acceptType {
+    color: #ffb600;
+}
+
+.expired {
+    background-color: #ff593038 !important;
+}
+
+.newType {
+    color: #00a49d;
+}
+
+.noAcceptType,
+.noAccept {
+    color: #d81f1c;
+}
+
+.accept {
+    color: rgba(9, 51, 61, 0.5);
+}
+
+.check-box {
+    cursor: pointer;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.check-item {
+    cursor: pointer;
+    top: 17px;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid rgba(178, 178, 178, 0.8);
+    border-radius: 4px;
+}
+
+.check-box:checked+.check-item::before {
+    content: '';
+    background: #00a49d;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+}
+
+.check-box:checked+.check-item::after {
+    content: '';
+    position: absolute;
+    transition: all 0.2s ease;
+    left: 1px;
+    top: 3px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+}

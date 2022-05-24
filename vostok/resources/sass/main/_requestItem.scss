@@ -1,0 +1,81 @@
+.Request {
+    &__btns {
+        width: 300px;
+        display: grid;
+        border: $border;
+        height: 40px;
+        grid-template-columns: 1fr 1fr;
+
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            color: rgba(25, 27, 29, 0.4);
+        }
+    }
+
+    &__actions {
+        margin-top: 24px;
+        display: flex;
+
+        &__item {
+            margin-left: 32px;
+            display: flex;
+            justify-content: space-between;
+
+            img {
+                margin-left: 12px;
+            }
+
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__map {
+        width: 100%;
+        height: 663px;
+        margin-top: 46px;
+        position: relative;
+    }
+
+    &__header_table {
+        margin-top: 46px;
+    }
+
+    &__table {
+        margin-top: 16px;
+    }
+
+    &__information {
+        thead {
+            background-color: inherit;
+            border-bottom: $border;
+        }
+
+        table {
+            border: 0;
+
+            td {
+                text-align: left;
+                padding: 11px 15px;
+
+                button {
+                    font-size: 14px;
+                    padding: 12px 24px;
+                    max-width: 300px;
+                }
+            }
+
+            tr.blackBg {
+                background-color: $black;
+
+                td {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

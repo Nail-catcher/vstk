@@ -1,0 +1,46 @@
+
+.swap{
+    table {
+        margin-top:46px;
+    }
+    button {
+        margin-top:24px;
+        max-width:250px;
+    }
+    .main-table{
+        position: relative;
+        border: none;
+        span{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 1px;
+            background: #e2e5e9;
+            top: 70px;
+            left: 0;
+        }
+        thead{
+            border: none;
+            background: none;
+            tr{
+                td{
+                    padding-bottom: 60px;
+                    &:nth-child(2){
+                        // padding-right: 360px;
+                    }
+                }
+            }
+        }
+        tbody{
+            tr{
+                border: $border;
+                td{
+                    padding: 30px 50px;
+                    &:nth-child(2){
+                        // padding-right: 350px;
+                    }
+                }
+            }
+        }
+    }
+}

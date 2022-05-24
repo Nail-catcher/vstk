@@ -1,0 +1,72 @@
+.calendar {
+    width: 360px;
+    min-height: 400px;
+    display: flex;
+    border: $border;
+    position: absolute;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+    align-items: center;
+    background-color: #fff;
+    &_block {
+        span.material-icons {
+            position: absolute;
+            bottom: 10px;
+            left: 30px;
+            font-size: 22px;
+            color: rgb(131, 131, 131);
+        }
+    }
+    &_input {
+        position: relative;
+        padding: 0 0 0 20px;
+        margin: 0 20px;
+        input {
+            padding-left: 40px;
+        }
+    }
+    .vc-container {
+        border: 0;
+        padding: 24px 16px;
+        width: 100%;
+    }
+    .vc-select select {
+        min-width: 120px;
+        max-width: 140px;
+    }
+    .vc-time-picker {
+        justify-content: center;
+    }
+    &_options {
+        padding: 16px 16px;
+        border-top: 1px solid #e2e5e9;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 16px;
+        button {
+            border: 0;
+            padding: 13px 35px;
+            font-size: 16px;
+        }
+    }
+    &_time {
+        h1 {
+            font-size: 16px;
+            color: $black;
+            padding-left: 16px;
+            padding-bottom: 16px;
+        }
+        &__input {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            input {
+                text-align: center;
+            }
+            p {
+                padding: 0 6px;
+            }
+        }
+    }
+}

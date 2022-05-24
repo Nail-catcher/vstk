@@ -1,0 +1,184 @@
+.equipment {
+    .base-header {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+    .options {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr auto;
+        margin-left:32px;
+        input {
+            height:48px;
+        }
+    }
+    .main-table{
+        overflow: hidden;
+        position: relative;
+        margin-top: 60px;
+        border: none;
+        label{
+            display: block;
+            p{
+              margin: 0px 0px 0px 35px;
+            }
+          }
+        span{
+            content: '';
+            display: block;
+        }
+        thead{
+            border: none;
+            background: none;
+            border-bottom: $border;
+            tr{
+                td{
+                    position: relative;
+                    padding: 20px 10px;
+                    color: rgba(25, 27, 29, 0.5);
+                }
+            }
+        }
+        tbody{
+            tr{
+                border: $border;
+                td{
+                    position: relative;
+                    padding: 20px 10px;
+                }
+            }
+        }
+    }
+}
+
+.equip-foot{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__item{
+        a{
+            cursor: pointer;
+        }
+        button{
+            transition: .3s;
+            padding: 13px 46px;
+            border: none;
+            background: #FF5930;
+            border-radius: 4px;
+            margin-left: 50px;
+            color: #fff;
+            &:hover{
+                background: #da4c28b0;
+            }
+        }
+        p, a{
+            font-size: 14px;
+            color: #2d2c2c;
+            font-weight: 500;
+            img{
+                margin-left: 5px;
+            }
+        }
+        &:last-child{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.swap{
+    .main-table{
+        position: relative;
+        border: none;
+        span{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 1px;
+            background: #e2e5e9;
+            top: 70px;
+            left: 0;
+        }
+        thead{
+            border: none;
+            background: none;
+            tr{
+                td{
+                    padding-bottom: 60px;
+                    &:nth-child(2){
+                        // padding-right: 360px;
+                    }
+                }
+            }
+        }
+        tbody{
+            tr{
+                border: $border;
+                td{
+                    padding: 30px 55px;
+                    &:nth-child(2){
+                        // padding-right: 350px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.check-box{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .check-style{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    top: 2px;
+    border-radius: 5px;
+    border: $border;
+    background: none;
+    cursor: pointer;
+  }
+  .check-box:checked + .check-style + .agr{
+    content: '';
+    position: absolute;
+    width: 100000%;
+    height: 100%;
+    background: rgba(0, 164, 157, 0.05);
+    top: 0;
+    left: 0;
+  }
+  .check-box:checked + .check-style{
+    background: $main;
+  }
+
+  .check-box:checked + .check-style::before{
+      content: '';
+    left: 4px;
+    top: 5px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+    position: absolute;
+    transition: all 0.2s ease;
+  }
+
+@media screen and (max-width: 950px){
+    .equipment .main-table .check-box:checked + .check-style + .agr{
+        display: none;
+    }
+    .equipment .main-table{
+        overflow-x: scroll;
+    }
+
+    .equipment .main-table span{
+        width: 170px;
+    }
+}

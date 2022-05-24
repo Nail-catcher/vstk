@@ -1,0 +1,31 @@
+.addPersonal{
+    .profile-password{
+        position: relative;
+        &::before{
+            content: '';
+            background-image: url(/img/edit.fef6fc9d.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            right: 16px;
+            top: 43px;
+            cursor: pointer;
+        }
+    }
+}
+
+.add_worker__btna{
+    display: flex;
+    margin-top: 20px;
+    .btn{
+        &:last-child{
+            margin-left: 15px;
+        }
+    }
+}
+
+.btn{
+    text-align: center;
+}
